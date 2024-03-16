@@ -1,13 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import { useSelector } from 'react-redux';
 
 function App() {
+
+  const {count}=useSelector(state=>state)
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {count}
         </p>
         <a
           className="App-link"
